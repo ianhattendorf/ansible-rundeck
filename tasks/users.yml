@@ -5,6 +5,7 @@
   register: rundeck_encoded_users
   when: rundeck_users|length > 0
   with_items: "{{ rundeck_users }}"
+  no_log: true
 
 - name: Rundeck | update basic security to have users
   template:
